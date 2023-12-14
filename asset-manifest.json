@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ihum-project/static/css/main.4b88b738.css",
-    "main.js": "/ihum-project/static/js/main.1794b949.js",
+    "main.js": "/ihum-project/static/js/main.24710f15.js",
     "static/js/787.cb62c1d0.chunk.js": "/ihum-project/static/js/787.cb62c1d0.chunk.js",
     "index.html": "/ihum-project/index.html",
     "main.4b88b738.css.map": "/ihum-project/static/css/main.4b88b738.css.map",
-    "main.1794b949.js.map": "/ihum-project/static/js/main.1794b949.js.map",
+    "main.24710f15.js.map": "/ihum-project/static/js/main.24710f15.js.map",
     "787.cb62c1d0.chunk.js.map": "/ihum-project/static/js/787.cb62c1d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b88b738.css",
-    "static/js/main.1794b949.js"
+    "static/js/main.24710f15.js"
   ]
 }
