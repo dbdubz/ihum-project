@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
 import Exhibit from './pages/Exhibit';
@@ -250,23 +250,25 @@ function App() {
   return (
     <div className="App">
       <Layout myjson={getPeriodData('all')}>
-        <Routes>
-          <Route path="/ihum-project" element={<Home />} />
-          <Route path="/ihum-project/exhibit" element={<Exhibit />} />
-          <Route path="/ihum-project/exhibit/late-medieval" element={<LateMedieval data={getPeriodData('late-medieval')} />} />
-          <Route path="/ihum-project/exhibit/late-medieval/:artifact" element={<LateMedieval data={getPeriodData('late-medieval')} />} />
-          <Route path="/ihum-project/exhibit/early-renaissance" element={<EarlyRenaissance data={getPeriodData('early-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/early-renaissance/:artifact" element={<EarlyRenaissance data={getPeriodData('early-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/early-mid-renaissance" element={<EarlyMidRenaissance data={getPeriodData('early-mid-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/early-mid-renaissance/:artifact" element={<EarlyMidRenaissance data={getPeriodData('early-mid-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/mid-renaissance" element={<MidRenaissance data={getPeriodData('mid-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/mid-renaissance/:artifact" element={<MidRenaissance data={getPeriodData('mid-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/high-renaissance" element={<HighRenaissance data={getPeriodData('high-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/high-renaissance/:artifact" element={<HighRenaissance data={getPeriodData('high-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/late-renaissance" element={<LateRenaissance data={getPeriodData('late-renaissance')} />} />
-          <Route path="/ihum-project/exhibit/late-renaissance/:artifact" element={<LateRenaissance data={getPeriodData('late-renaissance')} />} />
-          <Route path='*' element={<Home />} /> 
-        </Routes>
+        <Router>
+            <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/exhibit" element={<Exhibit />} />
+            <Route path="/exhibit/late-medieval" element={<LateMedieval data={getPeriodData('late-medieval')} />} />
+            <Route path="/exhibit/late-medieval/:artifact" element={<LateMedieval data={getPeriodData('late-medieval')} />} />
+            <Route path="/exhibit/early-renaissance" element={<EarlyRenaissance data={getPeriodData('early-renaissance')} />} />
+            <Route path="/exhibit/early-renaissance/:artifact" element={<EarlyRenaissance data={getPeriodData('early-renaissance')} />} />
+            <Route path="/exhibit/early-mid-renaissance" element={<EarlyMidRenaissance data={getPeriodData('early-mid-renaissance')} />} />
+            <Route path="/exhibit/early-mid-renaissance/:artifact" element={<EarlyMidRenaissance data={getPeriodData('early-mid-renaissance')} />} />
+            <Route path="/exhibit/mid-renaissance" element={<MidRenaissance data={getPeriodData('mid-renaissance')} />} />
+            <Route path="/exhibit/mid-renaissance/:artifact" element={<MidRenaissance data={getPeriodData('mid-renaissance')} />} />
+            <Route path="/exhibit/high-renaissance" element={<HighRenaissance data={getPeriodData('high-renaissance')} />} />
+            <Route path="/exhibit/high-renaissance/:artifact" element={<HighRenaissance data={getPeriodData('high-renaissance')} />} />
+            <Route path="/exhibit/late-renaissance" element={<LateRenaissance data={getPeriodData('late-renaissance')} />} />
+            <Route path="/exhibit/late-renaissance/:artifact" element={<LateRenaissance data={getPeriodData('late-renaissance')} />} />
+            <Route path='*' element={<Home />} /> 
+            </Routes>
+        </Router>
       </Layout>
     </div>
   );
